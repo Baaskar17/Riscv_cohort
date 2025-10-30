@@ -24,11 +24,17 @@ def save_to_file(mnemonics, output_file):
             file.write(mnemonic + '\n')
 
 def main():
-    directory = 'extensions'
-    output_file = 'all_opcodes.txt'
+    import os
+
+def main():
+    directory = '/home/vsysuser/workspace/riscv-opcodes/extensions'
+    output_file = '/home/vsysuser/workspace/Riscv_cohort/all_opcodes.txt'
+
+    print("Reading from:", directory)
     mnemonics = parse_opcodes(directory)
     print("\n".join(mnemonics))
     save_to_file(mnemonics, output_file)
+    print(f"\nSaved to: {output_file}")
 
 if __name__ == '__main__':
     main()
