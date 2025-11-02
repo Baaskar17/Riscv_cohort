@@ -26,9 +26,6 @@ def save_to_file(mnemonics, output_file):
             file.write(mnemonic + '\n')
 
 def main():
-    import os
-
-def main():
     directory = '/home/vsysuser/workspace/riscv-opcodes/extensions'
     output_file = '/home/vsysuser/workspace/Riscv_cohort/all_opcodes.txt'
 
