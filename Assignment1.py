@@ -13,7 +13,9 @@ def parse_opcodes(directory):
                         if line and not line.startswith('#'):
                             parts = line.split()
                             if parts:
-                                mnemonics.add(parts[0])
+                                mnemonic = parts[0]
+                                if not mnemonic.startswith('$'):
+                                    mnemonics.add(mnemonic)
                 except Exception as e:
                     print(f"Error reading {filepath}: {e}")
     return sorted(mnemonics)

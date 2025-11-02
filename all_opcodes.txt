@@ -1,5 +1,3 @@
-$import
-$pseudo_op
 add
 add.uw
 addi
