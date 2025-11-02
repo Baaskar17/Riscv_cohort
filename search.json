@@ -1,0 +1,7 @@
+[
+    {
+        "filename": "rv_d",
+        "line_number": 7,
+        "matched_text": "fadd.d    rd rs1 rs2      31..27=0x00 rm       26..25=1 6..2=0x14 1..0=3"
+    }
+]
