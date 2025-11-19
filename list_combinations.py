@@ -1,36 +1,56 @@
-import csv
-import json
+import os
+import re
 
-def extract_fields(input_file):
-    fields = []
+def parse_opcodes(directory):
+    instructions = []
 
-    with open(input_file, 'r') as file:
-        reader = csv.reader(file)
-        for row in reader:
-            if len(row) >= 3:  # Ensure the row has at least 3 columns
-                field_name = row[0].strip('"')  # Remove quotes around the field name
-                start_bit = row[1].strip()
-                end_bit = row[2].strip()
-                fields.append({
-                    "field_name": field_name,
-                    "start_bit": start_bit,
-                    "end_bit": end_bit
-                })
+    for filename in os.listdir(directory):
+        filepath = os.path.join(directory, filename)
+        if os.path.isfile(filepath):
+            with open(filepath, 'r') as file:
+                try:
+                    for line in file:
+                        line = line.strip()
+                        if line and not line.startswith('#'):  # Skip empty lines and comments
+                            # Extract mnemonic and fields (opcode, funct3, funct7)
+                            parts = line.split()
+                            mnemonic = parts[0] if parts else None
+                            opcode_match = re.search(r"6\.\.2=([0-9a-fx]+)", line)
+                            funct3_match = re.search(r"14\.\.12=([0-9a-fx]+)", line)
+                            funct7_match = re.search(r"31\.\.25=([0-9a-fx]+)", line)
 
-    return fields
+                            if mnemonic:
+                                instruction = {"mnemonic": mnemonic}
+                                if opcode_match:
+                                    instruction["opcode"] = opcode_match.group(1)
+                                if funct3_match:
+                                    instruction["funct3"] = funct3_match.group(1)
+                                if funct7_match:
+                                    instruction["funct7"] = funct7_match.group(1)
+                                instructions.append(instruction)
+                except Exception as e:
+                    print(f"Error reading {filepath}: {e}")
+    return instructions
 
-def save_to_json(data, output_file):
+def save_to_file(instructions, output_file):
     with open(output_file, 'w') as file:
-        json.dump(data, file, indent=4)
+        for instruction in instructions:
+            line = f"{instruction['mnemonic']}"
+            if "opcode" in instruction:
+                line += f", opcode: {instruction['opcode']}"
+            if "funct3" in instruction:
+                line += f", funct3: {instruction['funct3']}"
+            if "funct7" in instruction:
+                line += f", funct7: {instruction['funct7']}"
+            file.write(line + '\n')
 
 def main():
     directory = '/home/vsysuser/workspace/riscv-opcodes/extensions'
-    output_file = '/home/vsysuser/workspace/Riscv_cohort/combination.json'
-
-    fields = extract_fields(input_file)
-    save_to_json(fields, output_file)
-
-    print(f"Extracted {len(fields)} fields and saved to {output_file}.")
+    output_file = '/home/vsysuser/workspace/Riscv_cohort/extension_counts.csv'
+    instructions = parse_opcodes(directory)
+    for instruction in instructions:
+        print(instruction)
+    save_to_file(instructions, output_file)
 
 if __name__ == '__main__':
     main()

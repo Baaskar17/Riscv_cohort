@@ -1,108 +1,1227 @@
-Extension,Instruction Count
-rv64_d,6
-rv_zvbb,16
-rv_zksh,2
-rv_zimop,42
-rv64_zfh,4
-rv_h,12
-rv_d,29
-rv_zvkg,2
-rv64_zbb,9
-rv_zfbfmin,2
-rv_zabha,20
-rv_q_zfa,7
-rv64_zcb,2
-rv_zbkb,8
-rv64_h,3
-rv_zbs,4
-rv_zicfiss,7
-rv64_zks,6
-rv32_zbs,4
-rv_zfh_zfa,7
-rv_zcmp,6
-rv_zbb,15
-rv64_i,16
-rv_s,2
-rv_d_zfh,2
-rv_c_d,4
-rv32_zilsd,2
-rv_c_zihintntl,4
-rv32_zknh,6
-rv_zvkn,23
-rv_zfh,31
-rv32_i,6
-rv_zbkc,2
-rv64_q_zfa,2
-rv_zksed,2
-rv32_zclsd,4
-rv_zicntr,3
-rv_system,2
-rv_zba,3
-rv_i,64
-rv64_f,4
-rv32_zkn,14
-rv_zicbo,7
-rv64_zbkb,6
-rv_zvkned,11
-rv64_zk,17
-rv_zvksed,3
-rv32_zkne,2
-rv_zicfilp,1
-rv_zkn,16
-rv32_d_zfa,2
-rv64_zknh,4
-rv_zvfbfwma,2
-rv_m,8
-rv64_zkn,17
-rv_c,23
-rv_q_zfh,2
-rv64_zba,6
-rv_v_aliases,11
-rv64_q,4
-rv_a,11
-rv32_zbkb,4
-rv32_zbb,3
-rv_zcb,11
-rv64_zknd,5
-rv_smrnmi,1
-rv_zvksh,2
-rv64_a,11
-rv32_c,7
-rv_f_zfa,7
-rv_c_zicfiss,2
-rv64_zbs,4
-rv64_zacas,1
-rv_zks,16
-rv_zvknha,3
-rv32_zicntr,3
-rv64_c,10
-rv_zacas,2
-rv_zawrs,2
-rv_zicsr,13
-rv_d_zfa,8
-rv_zbkx,2
-rv_zbc,3
-rv_zihintntl,4
-rv_zvknhb,3
-rv_zk,16
-rv32_c_f,4
-rv32_zk,14
-rv_zknh,4
-rv_ssctr,1
-rv32_zknd,2
-rv64_zkne,4
-rv_zicond,2
-rv_f,39
-rv_zvbc,4
-rv_svinval,3
-rv_zvks,14
-rv_zvfbfmin,2
-rv_v,375
-rv_q,31
-rv_svinval_h,2
-rv_sdext,1
-rv_zcmt,1
-rv32_zks,4
-rv_zifencei,1
-rv64_m,5
-rv_zcmop,9
+fcvt.l.d, opcode: 0x14
+fcvt.lu.d, opcode: 0x14
+fmv.x.d, opcode: 0x14, funct3: 0
+fcvt.d.l, opcode: 0x14
+fcvt.d.lu, opcode: 0x14
+fmv.d.x, opcode: 0x14, funct3: 0
+vandn.vv, funct3: 0x0
+vandn.vx, funct3: 0x4
+vbrev.v, funct3: 0x2
+vbrev8.v, funct3: 0x2
+vrev8.v, funct3: 0x2
+vclz.v, funct3: 0x2
+vctz.v, funct3: 0x2
+vcpop.v, funct3: 0x2
+vrol.vv, funct3: 0x0
+vrol.vx, funct3: 0x4
+vror.vv, funct3: 0x0
+vror.vx, funct3: 0x4
+vror.vi, funct3: 0x3
+vwsll.vv, funct3: 0x0
+vwsll.vx, funct3: 0x4
+vwsll.vi, funct3: 0x3
+sm3p0, funct3: 1
+sm3p1, funct3: 1
+mop.r.N, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+mop.rr.N, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+fcvt.l.h, opcode: 0x14
+fcvt.lu.h, opcode: 0x14
+fcvt.h.l, opcode: 0x14
+fcvt.h.lu, opcode: 0x14
+hfence.vvma, opcode: 0x1, funct3: 0, funct7: 0x11
+hfence.gvma, opcode: 0x1, funct3: 0, funct7: 0x31
+hlv.b, opcode: 0x1, funct3: 4, funct7: 0x30
+hlv.bu, opcode: 0x1, funct3: 4, funct7: 0x30
+hlv.h, opcode: 0x1, funct3: 4, funct7: 0x32
+hlv.hu, opcode: 0x1, funct3: 4, funct7: 0x32
+hlvx.hu, opcode: 0x1, funct3: 4, funct7: 0x32
+hlv.w, opcode: 0x1, funct3: 4, funct7: 0x34
+hlvx.wu, opcode: 0x1, funct3: 4, funct7: 0x34
+hsv.b, opcode: 0x1, funct3: 4, funct7: 0x31
+hsv.h, opcode: 0x1, funct3: 4, funct7: 0x33
+hsv.w, opcode: 0x1, funct3: 4, funct7: 0x35
+fld, opcode: 0x01, funct3: 3
+fsd, opcode: 0x09, funct3: 3
+fmadd.d, opcode: 0x10
+fmsub.d, opcode: 0x11
+fnmsub.d, opcode: 0x12
+fnmadd.d, opcode: 0x13
+fadd.d, opcode: 0x14
+fsub.d, opcode: 0x14
+fmul.d, opcode: 0x14
+fdiv.d, opcode: 0x14
+fsqrt.d, opcode: 0x14
+fsgnj.d, opcode: 0x14, funct3: 0
+fsgnjn.d, opcode: 0x14, funct3: 1
+fsgnjx.d, opcode: 0x14, funct3: 2
+fmin.d, opcode: 0x14, funct3: 0
+fmax.d, opcode: 0x14, funct3: 1
+fcvt.s.d, opcode: 0x14
+fcvt.d.s, opcode: 0x14
+feq.d, opcode: 0x14, funct3: 2
+flt.d, opcode: 0x14, funct3: 1
+fle.d, opcode: 0x14, funct3: 0
+fclass.d, opcode: 0x14, funct3: 1
+fcvt.w.d, opcode: 0x14
+fcvt.wu.d, opcode: 0x14
+fcvt.d.w, opcode: 0x14
+fcvt.d.wu, opcode: 0x14
+$pseudo_op, opcode: 0x14, funct3: 0
+$pseudo_op, opcode: 0x14, funct3: 2
+$pseudo_op, opcode: 0x14, funct3: 1
+vgmul.vv, funct3: 0x2
+vghsh.vv, funct3: 0x2
+clzw, opcode: 0x06, funct3: 1
+ctzw, opcode: 0x06, funct3: 1
+cpopw, opcode: 0x06, funct3: 1
+rolw, opcode: 0x0, funct3: 1, funct7: 0x30
+rorw, opcode: 0x0, funct3: 5, funct7: 0x30
+roriw, opcode: 0x06, funct3: 5, funct7: 0x30
+rori, opcode: 0x04, funct3: 5
+$pseudo_op, opcode: 0x, funct3: 0x4, funct7: 0x04
+$pseudo_op, funct3: 5
+fcvt.bf16.s, opcode: 0x14
+fcvt.s.bf16, opcode: 0x14
+amoswap.b, opcode: 0x0, funct3: 0
+amoadd.b, opcode: 0x0, funct3: 0
+amoxor.b, opcode: 0x0, funct3: 0
+amoand.b, opcode: 0x0, funct3: 0
+amoor.b, opcode: 0x0, funct3: 0
+amomin.b, opcode: 0x0, funct3: 0
+amomax.b, opcode: 0x0, funct3: 0
+amominu.b, opcode: 0x0, funct3: 0
+amomaxu.b, opcode: 0x0, funct3: 0
+amoswap.h, opcode: 0x0, funct3: 1
+amoadd.h, opcode: 0x0, funct3: 1
+amoxor.h, opcode: 0x0, funct3: 1
+amoand.h, opcode: 0x0, funct3: 1
+amoor.h, opcode: 0x0, funct3: 1
+amomin.h, opcode: 0x0, funct3: 1
+amomax.h, opcode: 0x0, funct3: 1
+amominu.h, opcode: 0x0, funct3: 1
+amomaxu.h, opcode: 0x0, funct3: 1
+fli.q, opcode: 0x14, funct3: 0
+fminm.q, opcode: 0x14, funct3: 2
+fmaxm.q, opcode: 0x14, funct3: 3
+fround.q, opcode: 0x14
+froundnx.q, opcode: 0x14
+fleq.q, opcode: 0x14, funct3: 4
+fltq.q, opcode: 0x14, funct3: 5
+c.zext.w
+$pseudo_op, opcode: 0
+$import
+$import
+$import
+$import
+$import
+pack, opcode: 0x0, funct3: 4, funct7: 4
+packh, opcode: 0x0, funct3: 7, funct7: 4
+$pseudo_op, opcode: 0x4, funct3: 5
+hlv.wu, opcode: 0x1, funct3: 4, funct7: 0x34
+hlv.d, opcode: 0x1, funct3: 4, funct7: 0x36
+hsv.d, opcode: 0x1, funct3: 4, funct7: 0x37
+bclr, opcode: 0x0, funct3: 1, funct7: 0x24
+bext, opcode: 0x0, funct3: 5, funct7: 36
+binv, opcode: 0x0, funct3: 1, funct7: 52
+bset, opcode: 0x0, funct3: 1, funct7: 20
+ssamoswap.w, opcode: 0x0, funct3: 2
+ssamoswap.d, opcode: 0x0, funct3: 3
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, opcode: 0x1, funct3: 4
+$pseudo_op, funct3: 5
+$import
+$import
+$import
+$import
+$import
+$pseudo_op, opcode: 0x04, funct3: 1, funct7: 0x24
+$pseudo_op, opcode: 0x04, funct3: 5, funct7: 0x24
+$pseudo_op, opcode: 0x04, funct3: 1, funct7: 0x34
+$pseudo_op, opcode: 0x04, funct3: 1, funct7: 0x14
+fli.h, opcode: 0x14, funct3: 0
+fminm.h, opcode: 0x14, funct3: 2
+fmaxm.h, opcode: 0x14, funct3: 3
+fround.h, opcode: 0x14
+froundnx.h, opcode: 0x14
+fleq.h, opcode: 0x14, funct3: 4
+fltq.h, opcode: 0x14, funct3: 5
+cm.push
+cm.pop
+cm.popretz
+cm.popret
+cm.mvsa01
+cm.mva01s
+andn, opcode: 0x0, funct3: 7, funct7: 32
+orn, opcode: 0x0, funct3: 6, funct7: 32
+xnor, opcode: 0x0, funct3: 4, funct7: 32
+clz, opcode: 0x04, funct3: 1
+ctz, opcode: 0x04, funct3: 1
+cpop, opcode: 0x04, funct3: 1
+max, opcode: 0x0, funct3: 6, funct7: 5
+maxu, opcode: 0x0, funct3: 7, funct7: 5
+min, opcode: 0x0, funct3: 4, funct7: 5
+minu, opcode: 0x0, funct3: 5, funct7: 5
+sext.b, opcode: 0x04, funct3: 1
+sext.h, opcode: 0x04, funct3: 1
+rol, opcode: 0x0, funct3: 1, funct7: 0x30
+ror, opcode: 0x0, funct3: 5, funct7: 0x30
+$pseudo_op, funct3: 0x5
+lwu, opcode: 0x00, funct3: 6
+ld, opcode: 0x00, funct3: 3
+sd, opcode: 0x08, funct3: 3
+slli, opcode: 0x04, funct3: 1
+srli, opcode: 0x04, funct3: 5
+srai, opcode: 0x04, funct3: 5
+addiw, opcode: 0x06, funct3: 0
+slliw, opcode: 0x06, funct3: 1, funct7: 0
+srliw, opcode: 0x06, funct3: 5, funct7: 0
+sraiw, opcode: 0x06, funct3: 5, funct7: 32
+addw, opcode: 0x0, funct3: 0, funct7: 0
+subw, opcode: 0x0, funct3: 0, funct7: 32
+sllw, opcode: 0x0, funct3: 1, funct7: 0
+srlw, opcode: 0x0, funct3: 5, funct7: 0
+sraw, opcode: 0x0, funct3: 5, funct7: 32
+$pseudo_op, opcode: 0x06, funct3: 0
+sfence.vma, opcode: 0x1, funct3: 0, funct7: 0x09
+sret, opcode: 0x1, funct3: 0
+fcvt.d.h, opcode: 0x14
+fcvt.h.d, opcode: 0x14
+c.fld
+c.fsd
+c.fldsp
+c.fsdsp
+$pseudo_op, funct3: 3
+$pseudo_op, opcode: 0x08, funct3: 3
+$pseudo_op, opcode: 2
+$pseudo_op, opcode: 3
+$pseudo_op, opcode: 4
+$pseudo_op, opcode: 5
+sha512sum0r, funct3: 0
+sha512sum1r, funct3: 0
+sha512sig0l, funct3: 0
+sha512sig0h, funct3: 0
+sha512sig1l, funct3: 0
+sha512sig1h, funct3: 0
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+flh, opcode: 0x01, funct3: 1
+fsh, opcode: 0x09, funct3: 1
+fmadd.h, opcode: 0x10
+fmsub.h, opcode: 0x11
+fnmsub.h, opcode: 0x12
+fnmadd.h, opcode: 0x13
+fadd.h, opcode: 0x14
+fsub.h, opcode: 0x14
+fmul.h, opcode: 0x14
+fdiv.h, opcode: 0x14
+fsqrt.h, opcode: 0x14
+fsgnj.h, opcode: 0x14, funct3: 0
+fsgnjn.h, opcode: 0x14, funct3: 1
+fsgnjx.h, opcode: 0x14, funct3: 2
+fmin.h, opcode: 0x14, funct3: 0
+fmax.h, opcode: 0x14, funct3: 1
+fcvt.s.h, opcode: 0x14
+fcvt.h.s, opcode: 0x14
+feq.h, opcode: 0x14, funct3: 2
+flt.h, opcode: 0x14, funct3: 1
+fle.h, opcode: 0x14, funct3: 0
+fclass.h, opcode: 0x14, funct3: 1
+fcvt.w.h, opcode: 0x14
+fcvt.wu.h, opcode: 0x14
+fmv.x.h, opcode: 0x14, funct3: 0
+fcvt.h.w, opcode: 0x14
+fcvt.h.wu, opcode: 0x14
+fmv.h.x, opcode: 0x14, funct3: 0
+$pseudo_op, opcode: 0x14, funct3: 0
+$pseudo_op, opcode: 0x14, funct3: 2
+$pseudo_op, opcode: 0x14, funct3: 1
+$pseudo_op, opcode: 0x04, funct3: 1, funct7: 0
+$pseudo_op, opcode: 0x04, funct3: 5, funct7: 0
+$pseudo_op, opcode: 0x04, funct3: 5, funct7: 32
+$pseudo_op, opcode: 0x04, funct3: 1, funct7: 0
+$pseudo_op, opcode: 0x04, funct3: 5, funct7: 0
+$pseudo_op, opcode: 0x04, funct3: 5, funct7: 32
+$import
+$import
+fmvh.x.q, opcode: 0x14, funct3: 0
+fmvp.q.x, opcode: 0x14, funct3: 0
+sm4ed, funct3: 0
+sm4ks, funct3: 0
+$pseudo_op
+$pseudo_op
+$pseudo_op
+$pseudo_op
+amocas.b, opcode: 0x0, funct3: 0
+amocas.h, opcode: 0x0, funct3: 1
+$pseudo_op, opcode: 0x1, funct3: 2
+$pseudo_op, opcode: 0x1, funct3: 2
+$pseudo_op, opcode: 0x1, funct3: 2
+mret, opcode: 0x1, funct3: 0
+wfi, opcode: 0x1, funct3: 0
+sh1add, opcode: 0x0, funct3: 2, funct7: 16
+sh2add, opcode: 0x0, funct3: 4, funct7: 16
+sh3add, opcode: 0x0, funct3: 6, funct7: 16
+lui, opcode: 0x0
+auipc, opcode: 0x05
+jal, opcode: 0x1b
+jalr, opcode: 0x19, funct3: 0
+beq, opcode: 0x18, funct3: 0
+bne, opcode: 0x18, funct3: 1
+blt, opcode: 0x18, funct3: 4
+bge, opcode: 0x18, funct3: 5
+bltu, opcode: 0x18, funct3: 6
+bgeu, opcode: 0x18, funct3: 7
+lb, opcode: 0x00, funct3: 0
+lh, opcode: 0x00, funct3: 1
+lw, opcode: 0x00, funct3: 2
+lbu, opcode: 0x00, funct3: 4
+lhu, opcode: 0x00, funct3: 5
+sb, opcode: 0x08, funct3: 0
+sh, opcode: 0x08, funct3: 1
+sw, opcode: 0x08, funct3: 2
+addi, opcode: 0x04, funct3: 0
+slti, opcode: 0x04, funct3: 2
+sltiu, opcode: 0x04, funct3: 3
+xori, opcode: 0x04, funct3: 4
+ori, opcode: 0x04, funct3: 6
+andi, opcode: 0x04, funct3: 7
+add, opcode: 0x0, funct3: 0, funct7: 0
+sub, opcode: 0x0, funct3: 0, funct7: 32
+sll, opcode: 0x0, funct3: 1, funct7: 0
+slt, opcode: 0x0, funct3: 2, funct7: 0
+sltu, opcode: 0x0, funct3: 3, funct7: 0
+xor, opcode: 0x0, funct3: 4, funct7: 0
+srl, opcode: 0x0, funct3: 5, funct7: 0
+sra, opcode: 0x0, funct3: 5, funct7: 32
+or, opcode: 0x0, funct3: 6, funct7: 0
+and, opcode: 0x0, funct3: 7, funct7: 0
+fence, opcode: 0x03, funct3: 0
+$pseudo_op, opcode: 0x03, funct3: 0
+$pseudo_op, opcode: 0x03, funct3: 0
+ecall, opcode: 0x1
+ebreak, opcode: 0x1
+$pseudo_op, opcode: 0x1, funct3: 0
+$pseudo_op, opcode: 0x1, funct3: 0
+$pseudo_op, opcode: 0x04, funct3: 0
+$pseudo_op, opcode: 0x0, funct3: 0, funct7: 32
+$pseudo_op, opcode: 0x04, funct3: 0
+$pseudo_op, opcode: 0x04, funct3: 7
+$pseudo_op, opcode: 0x19, funct3: 0
+$pseudo_op, opcode: 0x18, funct3: 7
+$pseudo_op, opcode: 0x18, funct3: 6
+$pseudo_op, opcode: 0x18, funct3: 5
+$pseudo_op, opcode: 0x18, funct3: 5
+$pseudo_op, opcode: 0x18, funct3: 5
+$pseudo_op, opcode: 0x18, funct3: 4
+$pseudo_op, opcode: 0x18, funct3: 4
+$pseudo_op, opcode: 0x18, funct3: 4
+$pseudo_op, opcode: 0x18, funct3: 1
+$pseudo_op, opcode: 0x18, funct3: 0
+$pseudo_op, opcode: 0x04, funct3: 3
+$pseudo_op, opcode: 0x0, funct3: 3, funct7: 0
+$pseudo_op, opcode: 0x0, funct3: 2, funct7: 0
+$pseudo_op, opcode: 0x0, funct3: 2, funct7: 0
+$pseudo_op, opcode: 0x19, funct3: 0
+$pseudo_op, opcode: 0x19, funct3: 0
+$pseudo_op, opcode: 0x1b
+$pseudo_op, opcode: 0x1b
+fcvt.l.s, opcode: 0x14
+fcvt.lu.s, opcode: 0x14
+fcvt.s.l, opcode: 0x14
+fcvt.s.lu, opcode: 0x14
+$pseudo_op, opcode: 4, funct3: 1, funct7: 4
+$pseudo_op, opcode: 4, funct3: 5, funct7: 4
+$pseudo_op, opcode: 0x04, funct3: 5, funct7: 0x30
+$pseudo_op, funct3: 5
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+cbo.clean, opcode: 0x03, funct3: 2
+cbo.flush, opcode: 0x03, funct3: 2
+cbo.inval, opcode: 0x03, funct3: 2
+cbo.zero, opcode: 0x03, funct3: 2
+$pseudo_op, opcode: 0x04, funct3: 6
+$pseudo_op, opcode: 0x04, funct3: 6
+$pseudo_op, opcode: 0x04, funct3: 6
+$pseudo_op, funct3: 5
+$import
+$import
+$import
+$import
+packw, opcode: 0x0, funct3: 4, funct7: 4
+vaesdf.vv, funct3: 0x2
+vaesdf.vs, funct3: 0x2
+vaesdm.vv, funct3: 0x2
+vaesdm.vs, funct3: 0x2
+vaesef.vv, funct3: 0x2
+vaesef.vs, funct3: 0x2
+vaesem.vv, funct3: 0x2
+vaesem.vs, funct3: 0x2
+vaesz.vs, funct3: 0x2
+vaeskf1.vi, funct3: 0x2
+vaeskf2.vi, funct3: 0x2
+$pseudo_op, funct3: 5
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+vsm4k.vi, funct3: 0x2
+vsm4r.vv, funct3: 0x2
+vsm4r.vs, funct3: 0x2
+aes32esmi, funct3: 0
+aes32esi, funct3: 0
+$pseudo_op, opcode: 0x05
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$pseudo_op, opcode: 0x4, funct3: 5
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+fmvh.x.d, opcode: 0x14, funct3: 0
+fmvp.d.x, opcode: 0x14, funct3: 0
+sha512sum0, funct3: 1
+sha512sum1, funct3: 1
+sha512sig0, funct3: 1
+sha512sig1, funct3: 1
+vfwmaccbf16.vv, funct3: 0x1
+vfwmaccbf16.vf, funct3: 0x5
+mul, opcode: 0x0, funct3: 0, funct7: 1
+mulh, opcode: 0x0, funct3: 1, funct7: 1
+mulhsu, opcode: 0x0, funct3: 2, funct7: 1
+mulhu, opcode: 0x0, funct3: 3, funct7: 1
+div, opcode: 0x0, funct3: 4, funct7: 1
+divu, opcode: 0x0, funct3: 5, funct7: 1
+rem, opcode: 0x0, funct3: 6, funct7: 1
+remu, opcode: 0x0, funct3: 7, funct7: 1
+$pseudo_op, funct3: 5
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+c.addi4spn
+c.lw
+c.sw
+c.nop
+c.addi
+c.li
+c.addi16sp
+c.lui
+c.andi
+c.sub
+c.xor
+c.or
+c.and
+c.j
+c.beqz
+c.bnez
+c.lwsp
+c.jr, opcode: 0
+c.mv
+c.ebreak
+c.jalr, opcode: 0
+c.add
+c.swsp
+fcvt.q.h, opcode: 0x14
+fcvt.h.q, opcode: 0x14
+add.uw, opcode: 0x0, funct3: 0, funct7: 4
+sh1add.uw, opcode: 0x0, funct3: 2, funct7: 16
+sh2add.uw, opcode: 0x0, funct3: 4, funct7: 16
+sh3add.uw, opcode: 0x0, funct3: 6, funct7: 16
+slli.uw, opcode: 0x06, funct3: 1
+$pseudo_op, opcode: 0x0, funct3: 0, funct7: 4
+$pseudo_op, funct3: 0x0
+$pseudo_op, funct3: 0x0
+$pseudo_op, funct3: 0x0
+$pseudo_op, funct3: 0x0
+$pseudo_op, funct3: 0x0
+$pseudo_op, funct3: 0x0
+$pseudo_op, funct3: 0x1
+$pseudo_op, funct3: 0x1
+$pseudo_op, funct3: 0x2
+$pseudo_op, funct3: 0x2
+$pseudo_op, funct3: 0x2
+fcvt.l.q, opcode: 0x14
+fcvt.lu.q, opcode: 0x14
+fcvt.q.l, opcode: 0x14
+fcvt.q.lu, opcode: 0x14
+lr.w, opcode: 0x0, funct3: 2
+sc.w, opcode: 0x0, funct3: 2
+amoswap.w, opcode: 0x0, funct3: 2
+amoadd.w, opcode: 0x0, funct3: 2
+amoxor.w, opcode: 0x0, funct3: 2
+amoand.w, opcode: 0x0, funct3: 2
+amoor.w, opcode: 0x0, funct3: 2
+amomin.w, opcode: 0x0, funct3: 2
+amomax.w, opcode: 0x0, funct3: 2
+amominu.w, opcode: 0x0, funct3: 2
+amomaxu.w, opcode: 0x0, funct3: 2
+$pseudo_op, opcode: 4, funct3: 1, funct7: 4
+$pseudo_op, opcode: 4, funct3: 5, funct7: 4
+$pseudo_op, opcode: 0x04, funct3: 5, funct7: 0x30
+$pseudo_op, funct3: 5
+$pseudo_op, funct3: 0x4, funct7: 0x04
+$pseudo_op, funct3: 5
+$pseudo_op, opcode: 0x04, funct3: 5, funct7: 0x30
+c.lbu
+c.lhu
+c.lh
+c.sb
+c.sh
+c.zext.b
+c.sext.b
+c.zext.h
+c.sext.h
+c.not
+c.mul
+aes64dsm, funct3: 0b000
+aes64ds, funct3: 0b000
+aes64ks1i, funct3: 0b001
+aes64im, funct3: 0b001
+aes64ks2, funct3: 0b000
+mnret, opcode: 0x1, funct3: 0
+vsm3c.vi, funct3: 0x2
+vsm3me.vv, funct3: 0x2
+lr.d, opcode: 0x0, funct3: 3
+sc.d, opcode: 0x0, funct3: 3
+amoswap.d, opcode: 0x0, funct3: 3
+amoadd.d, opcode: 0x0, funct3: 3
+amoxor.d, opcode: 0x0, funct3: 3
+amoand.d, opcode: 0x0, funct3: 3
+amoor.d, opcode: 0x0, funct3: 3
+amomin.d, opcode: 0x0, funct3: 3
+amomax.d, opcode: 0x0, funct3: 3
+amominu.d, opcode: 0x0, funct3: 3
+amomaxu.d, opcode: 0x0, funct3: 3
+c.jal
+$pseudo_op
+$pseudo_op
+$pseudo_op
+$pseudo_op
+$pseudo_op
+$pseudo_op
+fli.s, opcode: 0x14, funct3: 0
+fminm.s, opcode: 0x14, funct3: 2
+fmaxm.s, opcode: 0x14, funct3: 3
+fround.s, opcode: 0x14
+froundnx.s, opcode: 0x14
+fleq.s, opcode: 0x14, funct3: 4
+fltq.s, opcode: 0x14, funct3: 5
+$pseudo_op, opcode: 0
+$pseudo_op, opcode: 0
+bclri, opcode: 0x04, funct3: 1
+bexti, opcode: 0x04, funct3: 5
+binvi, opcode: 0x04, funct3: 1
+bseti, opcode: 0x04, funct3: 1
+amocas.q, opcode: 0x0, funct3: 4
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$pseudo_op, opcode: 0x4, funct3: 5
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+vsha2ms.vv, funct3: 0x2
+vsha2ch.vv, funct3: 0x2
+vsha2cl.vv, funct3: 0x2
+$pseudo_op, opcode: 0x1, funct3: 2
+$pseudo_op, opcode: 0x1, funct3: 2
+$pseudo_op, opcode: 0x1, funct3: 2
+c.ld
+c.sd
+c.addiw
+c.srli
+c.srai
+c.subw
+c.addw
+c.slli
+c.ldsp
+c.sdsp
+amocas.w, opcode: 0x0, funct3: 2
+amocas.d, opcode: 0x0, funct3: 3
+wrs.nto, opcode: 0x1
+wrs.sto, opcode: 0x1
+csrrw, opcode: 0x1, funct3: 1
+csrrs, opcode: 0x1, funct3: 2
+csrrc, opcode: 0x1, funct3: 3
+csrrwi, opcode: 0x1, funct3: 5
+csrrsi, opcode: 0x1, funct3: 6
+csrrci, opcode: 0x1, funct3: 7
+$pseudo_op, opcode: 0x1, funct3: 2
+$pseudo_op, opcode: 0x1, funct3: 1
+$pseudo_op, opcode: 0x1, funct3: 2
+$pseudo_op, opcode: 0x1, funct3: 3
+$pseudo_op, opcode: 0x1, funct3: 5
+$pseudo_op, opcode: 0x1, funct3: 6
+$pseudo_op, opcode: 0x1, funct3: 7
+fli.d, opcode: 0x14, funct3: 0
+fminm.d, opcode: 0x14, funct3: 2
+fmaxm.d, opcode: 0x14, funct3: 3
+fround.d, opcode: 0x14
+froundnx.d, opcode: 0x14
+fcvtmod.w.d, opcode: 0x14, funct3: 1
+fleq.d, opcode: 0x14, funct3: 4
+fltq.d, opcode: 0x14, funct3: 5
+xperm4, opcode: 0x0, funct3: 2, funct7: 20
+xperm8, opcode: 0x0, funct3: 4, funct7: 20
+clmul, opcode: 0x0, funct3: 1, funct7: 5
+clmulr, opcode: 0x0, funct3: 2, funct7: 5
+clmulh, opcode: 0x0, funct3: 3, funct7: 5
+$pseudo_op, opcode: 0x0, funct3: 0, funct7: 0
+$pseudo_op, opcode: 0x0, funct3: 0, funct7: 0
+$pseudo_op, opcode: 0x0, funct3: 0, funct7: 0
+$pseudo_op, opcode: 0x0, funct3: 0, funct7: 0
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$pseudo_op, opcode: 0x4, funct3: 5
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+c.flw
+c.fsw
+c.flwsp
+c.fswsp
+$pseudo_op, opcode: 4, funct3: 1, funct7: 4
+$pseudo_op, opcode: 4, funct3: 5, funct7: 4
+$pseudo_op, opcode: 0x04, funct3: 5, funct7: 0x30
+$pseudo_op, funct3: 5
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+sha256sum0, funct3: 1
+sha256sum1, funct3: 1
+sha256sig0, funct3: 1
+sha256sig1, funct3: 1
+sctrclr, opcode: 0x1, funct3: 0
+aes32dsmi, funct3: 0
+aes32dsi, funct3: 0
+aes64esm, funct3: 0b000
+aes64es, funct3: 0b000
+$import
+$import
+czero.eqz, opcode: 0x0, funct3: 5, funct7: 7
+czero.nez, opcode: 0x0, funct3: 7, funct7: 7
+flw, opcode: 0x01, funct3: 2
+fsw, opcode: 0x09, funct3: 2
+fmadd.s, opcode: 0x10
+fmsub.s, opcode: 0x11
+fnmsub.s, opcode: 0x12
+fnmadd.s, opcode: 0x13
+fadd.s, opcode: 0x14
+fsub.s, opcode: 0x14
+fmul.s, opcode: 0x14
+fdiv.s, opcode: 0x14
+fsqrt.s, opcode: 0x14
+fsgnj.s, opcode: 0x14, funct3: 0
+fsgnjn.s, opcode: 0x14, funct3: 1
+fsgnjx.s, opcode: 0x14, funct3: 2
+fmin.s, opcode: 0x14, funct3: 0
+fmax.s, opcode: 0x14, funct3: 1
+fcvt.w.s, opcode: 0x14
+fcvt.wu.s, opcode: 0x14
+fmv.x.w, opcode: 0x14, funct3: 0
+feq.s, opcode: 0x14, funct3: 2
+flt.s, opcode: 0x14, funct3: 1
+fle.s, opcode: 0x14, funct3: 0
+fclass.s, opcode: 0x14, funct3: 1
+fcvt.s.w, opcode: 0x14
+fcvt.s.wu, opcode: 0x14
+fmv.w.x, opcode: 0x14, funct3: 0
+$pseudo_op, opcode: 0x14, funct3: 0
+$pseudo_op, opcode: 0x14, funct3: 0
+$pseudo_op, opcode: 0x14, funct3: 0
+$pseudo_op, opcode: 0x14, funct3: 2
+$pseudo_op, opcode: 0x14, funct3: 1
+$pseudo_op, opcode: 0x1, funct3: 2
+$pseudo_op, opcode: 0x1, funct3: 1
+$pseudo_op, opcode: 0x1, funct3: 5
+$pseudo_op, opcode: 0x1, funct3: 2
+$pseudo_op, opcode: 0x1, funct3: 1
+$pseudo_op, opcode: 0x1, funct3: 5
+$pseudo_op, opcode: 0x1, funct3: 1
+$pseudo_op, opcode: 0x1, funct3: 2
+vclmul.vv, funct3: 0x2
+vclmul.vx, funct3: 0x6
+vclmulh.vv, funct3: 0x2
+vclmulh.vx, funct3: 0x6
+sinval.vma, opcode: 0x1, funct3: 0, funct7: 0x0b
+sfence.w.inval, opcode: 0x1, funct3: 0, funct7: 0x0c
+sfence.inval.ir, opcode: 0x1, funct3: 0, funct7: 0x0c
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+$import
+vfncvtbf16.f.f.w, funct3: 0x1
+vfwcvtbf16.f.f.v, funct3: 0x1
+vsetivli, funct3: 0x7
+vsetvli, funct3: 0x7
+vsetvl, funct3: 0x7
+vlm.v, funct3: 0x0
+vsm.v, funct3: 0x0
+vle8.v, funct3: 0x0
+vle16.v, funct3: 0x5
+vle32.v, funct3: 0x6
+vle64.v, funct3: 0x7
+vse8.v, funct3: 0x0
+vse16.v, funct3: 0x5
+vse32.v, funct3: 0x6
+vse64.v, funct3: 0x7
+vluxei8.v, funct3: 0x0
+vluxei16.v, funct3: 0x5
+vluxei32.v, funct3: 0x6
+vluxei64.v, funct3: 0x7
+vsuxei8.v, funct3: 0x0
+vsuxei16.v, funct3: 0x5
+vsuxei32.v, funct3: 0x6
+vsuxei64.v, funct3: 0x7
+vlse8.v, funct3: 0x0
+vlse16.v, funct3: 0x5
+vlse32.v, funct3: 0x6
+vlse64.v, funct3: 0x7
+vsse8.v, funct3: 0x0
+vsse16.v, funct3: 0x5
+vsse32.v, funct3: 0x6
+vsse64.v, funct3: 0x7
+vloxei8.v, funct3: 0x0
+vloxei16.v, funct3: 0x5
+vloxei32.v, funct3: 0x6
+vloxei64.v, funct3: 0x7
+vsoxei8.v, funct3: 0x0
+vsoxei16.v, funct3: 0x5
+vsoxei32.v, funct3: 0x6
+vsoxei64.v, funct3: 0x7
+vle8ff.v, funct3: 0x0
+vle16ff.v, funct3: 0x5
+vle32ff.v, funct3: 0x6
+vle64ff.v, funct3: 0x7
+vl1re8.v, funct3: 0x0
+vl1re16.v, funct3: 0x5
+vl1re32.v, funct3: 0x6
+vl1re64.v, funct3: 0x7
+vl2re8.v, funct3: 0x0
+vl2re16.v, funct3: 0x5
+vl2re32.v, funct3: 0x6
+vl2re64.v, funct3: 0x7
+vl4re8.v, funct3: 0x0
+vl4re16.v, funct3: 0x5
+vl4re32.v, funct3: 0x6
+vl4re64.v, funct3: 0x7
+vl8re8.v, funct3: 0x0
+vl8re16.v, funct3: 0x5
+vl8re32.v, funct3: 0x6
+vl8re64.v, funct3: 0x7
+vs1r.v, funct3: 0x0
+vs2r.v, funct3: 0x0
+vs4r.v, funct3: 0x0
+vs8r.v, funct3: 0x0
+vfadd.vf, funct3: 0x5
+vfsub.vf, funct3: 0x5
+vfmin.vf, funct3: 0x5
+vfmax.vf, funct3: 0x5
+vfsgnj.vf, funct3: 0x5
+vfsgnjn.vf, funct3: 0x5
+vfsgnjx.vf, funct3: 0x5
+vfslide1up.vf, funct3: 0x5
+vfslide1down.vf, funct3: 0x5
+vfmv.s.f, funct3: 0x5
+vfmerge.vfm, funct3: 0x5
+vfmv.v.f, funct3: 0x5
+vmfeq.vf, funct3: 0x5
+vmfle.vf, funct3: 0x5
+vmflt.vf, funct3: 0x5
+vmfne.vf, funct3: 0x5
+vmfgt.vf, funct3: 0x5
+vmfge.vf, funct3: 0x5
+vfdiv.vf, funct3: 0x5
+vfrdiv.vf, funct3: 0x5
+vfmul.vf, funct3: 0x5
+vfrsub.vf, funct3: 0x5
+vfmadd.vf, funct3: 0x5
+vfnmadd.vf, funct3: 0x5
+vfmsub.vf, funct3: 0x5
+vfnmsub.vf, funct3: 0x5
+vfmacc.vf, funct3: 0x5
+vfnmacc.vf, funct3: 0x5
+vfmsac.vf, funct3: 0x5
+vfnmsac.vf, funct3: 0x5
+vfwadd.vf, funct3: 0x5
+vfwsub.vf, funct3: 0x5
+vfwadd.wf, funct3: 0x5
+vfwsub.wf, funct3: 0x5
+vfwmul.vf, funct3: 0x5
+vfwmacc.vf, funct3: 0x5
+vfwnmacc.vf, funct3: 0x5
+vfwmsac.vf, funct3: 0x5
+vfwnmsac.vf, funct3: 0x5
+vfadd.vv, funct3: 0x1
+vfredusum.vs, funct3: 0x1
+vfsub.vv, funct3: 0x1
+vfredosum.vs, funct3: 0x1
+vfmin.vv, funct3: 0x1
+vfredmin.vs, funct3: 0x1
+vfmax.vv, funct3: 0x1
+vfredmax.vs, funct3: 0x1
+vfsgnj.vv, funct3: 0x1
+vfsgnjn.vv, funct3: 0x1
+vfsgnjx.vv, funct3: 0x1
+vfmv.f.s, funct3: 0x1
+vmfeq.vv, funct3: 0x1
+vmfle.vv, funct3: 0x1
+vmflt.vv, funct3: 0x1
+vmfne.vv, funct3: 0x1
+vfdiv.vv, funct3: 0x1
+vfmul.vv, funct3: 0x1
+vfmadd.vv, funct3: 0x1
+vfnmadd.vv, funct3: 0x1
+vfmsub.vv, funct3: 0x1
+vfnmsub.vv, funct3: 0x1
+vfmacc.vv, funct3: 0x1
+vfnmacc.vv, funct3: 0x1
+vfmsac.vv, funct3: 0x1
+vfnmsac.vv, funct3: 0x1
+vfcvt.xu.f.v, funct3: 0x1
+vfcvt.x.f.v, funct3: 0x1
+vfcvt.f.xu.v, funct3: 0x1
+vfcvt.f.x.v, funct3: 0x1
+vfcvt.rtz.xu.f.v, funct3: 0x1
+vfcvt.rtz.x.f.v, funct3: 0x1
+vfwcvt.xu.f.v, funct3: 0x1
+vfwcvt.x.f.v, funct3: 0x1
+vfwcvt.f.xu.v, funct3: 0x1
+vfwcvt.f.x.v, funct3: 0x1
+vfwcvt.f.f.v, funct3: 0x1
+vfwcvt.rtz.xu.f.v, funct3: 0x1
+vfwcvt.rtz.x.f.v, funct3: 0x1
+vfncvt.xu.f.w, funct3: 0x1
+vfncvt.x.f.w, funct3: 0x1
+vfncvt.f.xu.w, funct3: 0x1
+vfncvt.f.x.w, funct3: 0x1
+vfncvt.f.f.w, funct3: 0x1
+vfncvt.rod.f.f.w, funct3: 0x1
+vfncvt.rtz.xu.f.w, funct3: 0x1
+vfncvt.rtz.x.f.w, funct3: 0x1
+vfsqrt.v, funct3: 0x1
+vfrsqrt7.v, funct3: 0x1
+vfrec7.v, funct3: 0x1
+vfclass.v, funct3: 0x1
+vfwadd.vv, funct3: 0x1
+vfwredusum.vs, funct3: 0x1
+vfwsub.vv, funct3: 0x1
+vfwredosum.vs, funct3: 0x1
+vfwadd.wv, funct3: 0x1
+vfwsub.wv, funct3: 0x1
+vfwmul.vv, funct3: 0x1
+vfwmacc.vv, funct3: 0x1
+vfwnmacc.vv, funct3: 0x1
+vfwmsac.vv, funct3: 0x1
+vfwnmsac.vv, funct3: 0x1
+vadd.vx, funct3: 0x4
+vsub.vx, funct3: 0x4
+vrsub.vx, funct3: 0x4
+vminu.vx, funct3: 0x4
+vmin.vx, funct3: 0x4
+vmaxu.vx, funct3: 0x4
+vmax.vx, funct3: 0x4
+vand.vx, funct3: 0x4
+vor.vx, funct3: 0x4
+vxor.vx, funct3: 0x4
+vrgather.vx, funct3: 0x4
+vslideup.vx, funct3: 0x4
+vslidedown.vx, funct3: 0x4
+vadc.vxm, funct3: 0x4
+vmadc.vxm, funct3: 0x4
+vmadc.vx, funct3: 0x4
+vsbc.vxm, funct3: 0x4
+vmsbc.vxm, funct3: 0x4
+vmsbc.vx, funct3: 0x4
+vmerge.vxm, funct3: 0x4
+vmv.v.x, funct3: 0x4
+vmseq.vx, funct3: 0x4
+vmsne.vx, funct3: 0x4
+vmsltu.vx, funct3: 0x4
+vmslt.vx, funct3: 0x4
+vmsleu.vx, funct3: 0x4
+vmsle.vx, funct3: 0x4
+vmsgtu.vx, funct3: 0x4
+vmsgt.vx, funct3: 0x4
+vsaddu.vx, funct3: 0x4
+vsadd.vx, funct3: 0x4
+vssubu.vx, funct3: 0x4
+vssub.vx, funct3: 0x4
+vsll.vx, funct3: 0x4
+vsmul.vx, funct3: 0x4
+vsrl.vx, funct3: 0x4
+vsra.vx, funct3: 0x4
+vssrl.vx, funct3: 0x4
+vssra.vx, funct3: 0x4
+vnsrl.wx, funct3: 0x4
+vnsra.wx, funct3: 0x4
+vnclipu.wx, funct3: 0x4
+vnclip.wx, funct3: 0x4
+vadd.vv, funct3: 0x0
+vsub.vv, funct3: 0x0
+vminu.vv, funct3: 0x0
+vmin.vv, funct3: 0x0
+vmaxu.vv, funct3: 0x0
+vmax.vv, funct3: 0x0
+vand.vv, funct3: 0x0
+vor.vv, funct3: 0x0
+vxor.vv, funct3: 0x0
+vrgather.vv, funct3: 0x0
+vrgatherei16.vv, funct3: 0x0
+vadc.vvm, funct3: 0x0
+vmadc.vvm, funct3: 0x0
+vmadc.vv, funct3: 0x0
+vsbc.vvm, funct3: 0x0
+vmsbc.vvm, funct3: 0x0
+vmsbc.vv, funct3: 0x0
+vmerge.vvm, funct3: 0x0
+vmv.v.v, funct3: 0x0
+vmseq.vv, funct3: 0x0
+vmsne.vv, funct3: 0x0
+vmsltu.vv, funct3: 0x0
+vmslt.vv, funct3: 0x0
+vmsleu.vv, funct3: 0x0
+vmsle.vv, funct3: 0x0
+vsaddu.vv, funct3: 0x0
+vsadd.vv, funct3: 0x0
+vssubu.vv, funct3: 0x0
+vssub.vv, funct3: 0x0
+vsll.vv, funct3: 0x0
+vsmul.vv, funct3: 0x0
+vsrl.vv, funct3: 0x0
+vsra.vv, funct3: 0x0
+vssrl.vv, funct3: 0x0
+vssra.vv, funct3: 0x0
+vnsrl.wv, funct3: 0x0
+vnsra.wv, funct3: 0x0
+vnclipu.wv, funct3: 0x0
+vnclip.wv, funct3: 0x0
+vwredsumu.vs, funct3: 0x0
+vwredsum.vs, funct3: 0x0
+vadd.vi, funct3: 0x3
+vrsub.vi, funct3: 0x3
+vand.vi, funct3: 0x3
+vor.vi, funct3: 0x3
+vxor.vi, funct3: 0x3
+vrgather.vi, funct3: 0x3
+vslideup.vi, funct3: 0x3
+vslidedown.vi, funct3: 0x3
+vadc.vim, funct3: 0x3
+vmadc.vim, funct3: 0x3
+vmadc.vi, funct3: 0x3
+vmerge.vim, funct3: 0x3
+vmv.v.i, funct3: 0x3
+vmseq.vi, funct3: 0x3
+vmsne.vi, funct3: 0x3
+vmsleu.vi, funct3: 0x3
+vmsle.vi, funct3: 0x3
+vmsgtu.vi, funct3: 0x3
+vmsgt.vi, funct3: 0x3
+vsaddu.vi, funct3: 0x3
+vsadd.vi, funct3: 0x3
+vsll.vi, funct3: 0x3
+vmv1r.v, funct3: 0x3
+vmv2r.v, funct3: 0x3
+vmv4r.v, funct3: 0x3
+vmv8r.v, funct3: 0x3
+vsrl.vi, funct3: 0x3
+vsra.vi, funct3: 0x3
+vssrl.vi, funct3: 0x3
+vssra.vi, funct3: 0x3
+vnsrl.wi, funct3: 0x3
+vnsra.wi, funct3: 0x3
+vnclipu.wi, funct3: 0x3
+vnclip.wi, funct3: 0x3
+vredsum.vs, funct3: 0x2
+vredand.vs, funct3: 0x2
+vredor.vs, funct3: 0x2
+vredxor.vs, funct3: 0x2
+vredminu.vs, funct3: 0x2
+vredmin.vs, funct3: 0x2
+vredmaxu.vs, funct3: 0x2
+vredmax.vs, funct3: 0x2
+vaaddu.vv, funct3: 0x2
+vaadd.vv, funct3: 0x2
+vasubu.vv, funct3: 0x2
+vasub.vv, funct3: 0x2
+vmv.x.s, funct3: 0x2
+vzext.vf8, funct3: 0x2
+vsext.vf8, funct3: 0x2
+vzext.vf4, funct3: 0x2
+vsext.vf4, funct3: 0x2
+vzext.vf2, funct3: 0x2
+vsext.vf2, funct3: 0x2
+vcompress.vm, funct3: 0x2
+vmandn.mm, funct3: 0x2
+vmand.mm, funct3: 0x2
+vmor.mm, funct3: 0x2
+vmxor.mm, funct3: 0x2
+vmorn.mm, funct3: 0x2
+vmnand.mm, funct3: 0x2
+vmnor.mm, funct3: 0x2
+vmxnor.mm, funct3: 0x2
+vmsbf.m, funct3: 0x2
+vmsof.m, funct3: 0x2
+vmsif.m, funct3: 0x2
+viota.m, funct3: 0x2
+vid.v, funct3: 0x2
+vcpop.m, funct3: 0x2
+vfirst.m, funct3: 0x2
+vdivu.vv, funct3: 0x2
+vdiv.vv, funct3: 0x2
+vremu.vv, funct3: 0x2
+vrem.vv, funct3: 0x2
+vmulhu.vv, funct3: 0x2
+vmul.vv, funct3: 0x2
+vmulhsu.vv, funct3: 0x2
+vmulh.vv, funct3: 0x2
+vmadd.vv, funct3: 0x2
+vnmsub.vv, funct3: 0x2
+vmacc.vv, funct3: 0x2
+vnmsac.vv, funct3: 0x2
+vwaddu.vv, funct3: 0x2
+vwadd.vv, funct3: 0x2
+vwsubu.vv, funct3: 0x2
+vwsub.vv, funct3: 0x2
+vwaddu.wv, funct3: 0x2
+vwadd.wv, funct3: 0x2
+vwsubu.wv, funct3: 0x2
+vwsub.wv, funct3: 0x2
+vwmulu.vv, funct3: 0x2
+vwmulsu.vv, funct3: 0x2
+vwmul.vv, funct3: 0x2
+vwmaccu.vv, funct3: 0x2
+vwmacc.vv, funct3: 0x2
+vwmaccsu.vv, funct3: 0x2
+vaaddu.vx, funct3: 0x6
+vaadd.vx, funct3: 0x6
+vasubu.vx, funct3: 0x6
+vasub.vx, funct3: 0x6
+vmv.s.x, funct3: 0x6
+vslide1up.vx, funct3: 0x6
+vslide1down.vx, funct3: 0x6
+vdivu.vx, funct3: 0x6
+vdiv.vx, funct3: 0x6
+vremu.vx, funct3: 0x6
+vrem.vx, funct3: 0x6
+vmulhu.vx, funct3: 0x6
+vmul.vx, funct3: 0x6
+vmulhsu.vx, funct3: 0x6
+vmulh.vx, funct3: 0x6
+vmadd.vx, funct3: 0x6
+vnmsub.vx, funct3: 0x6
+vmacc.vx, funct3: 0x6
+vnmsac.vx, funct3: 0x6
+vwaddu.vx, funct3: 0x6
+vwadd.vx, funct3: 0x6
+vwsubu.vx, funct3: 0x6
+vwsub.vx, funct3: 0x6
+vwaddu.wx, funct3: 0x6
+vwadd.wx, funct3: 0x6
+vwsubu.wx, funct3: 0x6
+vwsub.wx, funct3: 0x6
+vwmulu.vx, funct3: 0x6
+vwmulsu.vx, funct3: 0x6
+vwmul.vx, funct3: 0x6
+vwmaccu.vx, funct3: 0x6
+vwmacc.vx, funct3: 0x6
+vwmaccus.vx, funct3: 0x6
+vwmaccsu.vx, funct3: 0x6
+flq, opcode: 0x01, funct3: 4
+fsq, opcode: 0x09, funct3: 4
+fmadd.q, opcode: 0x10
+fmsub.q, opcode: 0x11
+fnmsub.q, opcode: 0x12
+fnmadd.q, opcode: 0x13
+fadd.q, opcode: 0x14
+fsub.q, opcode: 0x14
+fmul.q, opcode: 0x14
+fdiv.q, opcode: 0x14
+fsqrt.q, opcode: 0x14
+fsgnj.q, opcode: 0x14, funct3: 0
+fsgnjn.q, opcode: 0x14, funct3: 1
+fsgnjx.q, opcode: 0x14, funct3: 2
+fmin.q, opcode: 0x14, funct3: 0
+fmax.q, opcode: 0x14, funct3: 1
+fcvt.s.q, opcode: 0x14
+fcvt.q.s, opcode: 0x14
+fcvt.d.q, opcode: 0x14
+fcvt.q.d, opcode: 0x14
+feq.q, opcode: 0x14, funct3: 2
+flt.q, opcode: 0x14, funct3: 1
+fle.q, opcode: 0x14, funct3: 0
+fclass.q, opcode: 0x14, funct3: 1
+fcvt.w.q, opcode: 0x14
+fcvt.wu.q, opcode: 0x14
+fcvt.q.w, opcode: 0x14
+fcvt.q.wu, opcode: 0x14
+$pseudo_op, opcode: 0x14, funct3: 0
+$pseudo_op, opcode: 0x14, funct3: 2
+$pseudo_op, opcode: 0x14, funct3: 1
+hinval.vvma, opcode: 0x1, funct3: 0, funct7: 0x13
+hinval.gvma, opcode: 0x1, funct3: 0, funct7: 0x33
+dret, opcode: 0x1, funct3: 0
+cm.jalt
+$pseudo_op, opcode: 4, funct3: 1, funct7: 4
+$pseudo_op, opcode: 4, funct3: 5, funct7: 4
+$pseudo_op, opcode: 0x04, funct3: 5, funct7: 0x30
+$pseudo_op, funct3: 5
+fence.i, opcode: 0x03, funct3: 1
+mulw, opcode: 0x0, funct3: 0, funct7: 1
+divw, opcode: 0x0, funct3: 4, funct7: 1
+divuw, opcode: 0x0, funct3: 5, funct7: 1
+remw, opcode: 0x0, funct3: 6, funct7: 1
+remuw, opcode: 0x0, funct3: 7, funct7: 1
+c.mop.N, opcode: 0
+$pseudo_op, opcode: 0
+$pseudo_op, opcode: 0
+$pseudo_op, opcode: 0
+$pseudo_op, opcode: 0
+$pseudo_op, opcode: 0
+$pseudo_op, opcode: 0
+$pseudo_op, opcode: 0
+$pseudo_op, opcode: 0
