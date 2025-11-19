@@ -1,60 +1,99 @@
 import os
+import zipfile
 import shutil
 
-def find_file(root_directory, target_filename):
-    # Walk through directories recursively
-    for folder, subfolders, files in os.walk(root_directory):
-        if target_filename in files:
-            return os.path.join(folder, target_filename)
+# -----------------------------------------------------
+# Find list.txt in ROOT + all subfolders
+# -----------------------------------------------------
+def find_list_file(root_directory, filename="list.txt"):
+
+    # 1. Check ROOT directory first
+    root_level_path = os.path.join(root_directory, filename)
+    if os.path.isfile(root_level_path):
+        return root_level_path
+
+    # 2. Then check all subdirectories
+    for root, dirs, files in os.walk(root_directory):
+        if filename in files:
+            return os.path.join(root, filename)
+
     return None
 
-def copy_listed_files(root_directory, output_directory, file_list):
-    for filename in file_list:
-        print(f"\nSearching for: {filename}")
 
-        found_path = find_file(root_directory, filename)
+# -----------------------------------------------------
+# Extract ZIP files
+# -----------------------------------------------------
+def extract_zip_files(root_directory):
+    print("\n🔍 Searching and extracting ZIP files...\n")
+    for root, dirs, files in os.walk(root_directory):
+        for f in files:
+            if f.lower().endswith(".zip"):
+                zip_path = os.path.join(root, f)
+                try:
+                    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+                        zip_ref.extractall(root)
+                    print(f"✅ Extracted: {zip_path}")
+                except zipfile.BadZipFile:
+                    print(f"❌ Corrupted ZIP skipped: {zip_path}")
 
-        if found_path:
-            print(f"✔ Found: {found_path}")
 
-            # Folder name = filename without extension
-            folder_name = os.path.splitext(filename)[0]
-            destination_folder = os.path.join(output_directory, folder_name)
+# -----------------------------------------------------
+# Copy files listed in list.txt
+# -----------------------------------------------------
+def copy_listed_files(root_directory, output_directory, list_file_path):
+    print("\n📁 Processing files from list.txt...\n")
 
-            os.makedirs(destination_folder, exist_ok=True)
+    with open(list_file_path, "r", encoding="utf-8") as f:
+        filenames = [line.strip() for line in f if line.strip()]
 
-            destination_file = os.path.join(destination_folder, filename)
-            shutil.copy2(found_path, destination_file)
+    found_any = False
 
-            print(f"📂 Copied to: {destination_file}")
+    for name in filenames:
+        file_found = False
 
-        else:
-            print(f"⚠️ Warning: {filename} not found!")
+        for root, dirs, files in os.walk(root_directory):
+            for f in files:
+                # match exact name or name without extension
+                if f == name or f.split('.')[0] == name:
+                    src_path = os.path.join(root, f)
+                    out_folder = os.path.join(output_directory, os.path.splitext(name)[0])
+                    os.makedirs(out_folder, exist_ok=True)
 
-def main():
-    root_directory = input("Enter ROOT directory to search in: ").strip()
-    output_directory = input("Enter OUTPUT directory to copy files into: ").strip()
-    list_file = input("Enter path to the text file that contains filenames: ").strip()
+                    shutil.copy2(src_path, out_folder)
+                    print(f"✅ Copied: {src_path} → {out_folder}")
 
-    if not os.path.isdir(root_directory):
-        print("❌ Invalid root directory.")
-        return
+                    file_found = True
+                    found_any = True
+                    break
 
-    if not os.path.isdir(output_directory):
-        print("❌ Invalid output directory.")
-        return
+            if file_found:
+                break
 
-    if not os.path.isfile(list_file):
-        print("❌ List file not found.")
-        return
+        if not file_found:
+            print(f"⚠️ WARNING: {name} not found anywhere in directory tree.")
 
-    # Read filenames from file list
-    with open(list_file, "r") as f:
-        file_list = [line.strip() for line in f if line.strip()]
+    if not found_any:
+        print("\n⚠️ No listed files were found at all!")
 
-    copy_listed_files(root_directory, output_directory, file_list)
 
-    print("\n✔ Processing complete.")
+# -----------------------------------------------------
+# MAIN PROGRAM
+# -----------------------------------------------------
+root_directory = input("Enter ROOT directory to search in: ").strip()
+output_directory = input("Enter OUTPUT directory to copy files into: ").strip()
 
-if __name__ == "__main__":
-    main()
+print("\n🔍 Searching for list.txt in ROOT and all subfolders...")
+list_file_path = find_list_file(root_directory)
+
+if not list_file_path:
+    print("❌ ERROR: list.txt not found in ANY location!")
+    input("\nPress ENTER to exit...")
+    exit()
+
+print(f"📄 list.txt found at: {list_file_path}")
+
+extract_zip_files(root_directory)
+copy_listed_files(root_directory, output_directory, list_file_path)
+
+# Prevent console from closing
+input("\nPress ENTER to exit...")
